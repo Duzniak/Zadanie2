@@ -4,7 +4,7 @@ class Activity:
         self.time = time
 
     def __str__(self):
-        return f"{self.name} at {self.time}"
+        return f"{self.name} o godzinie {self.time}"
     
 class Destination:
     def __init__(self, name: str):

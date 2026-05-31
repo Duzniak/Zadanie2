@@ -14,7 +14,7 @@ namespace Planer
         }
         public override string ToString()
         {
-            return $"{Name} at {Time}";
+            return $"{Name} o godzinie {Time}";
         }
     }
     public class Destination
