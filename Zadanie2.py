@@ -15,7 +15,7 @@ class Destination:
         self.activities.append(activity)
 
     def show_schedule(self):
-        print(f"Cel wycieczki: {self.name}:")
+        print(f"\nCel wycieczki: {self.name}:")
         if not self.activities:
             print("Brak zaplanowanych aktywności.")
         for activity in self.activities:
@@ -70,6 +70,8 @@ def main():
 
         trip.add_destination(destination)
 
+        trip.show_itinerary()
+
         while True:
             remove_activity = input(f"Czy chcesz usunąć jakąś aktywność z {dest_name}? (tak/nie): ").strip().lower()
             if remove_activity == "tak":
@@ -80,6 +82,7 @@ def main():
                         destination.remove_activity(activity)
                         print(f"Aktywność '{activity_to_remove}' została usunięta.")
                         activity_found = True
+                        trip.show_itinerary()
                         break
                 if not activity_found:
                     print(f"Aktywność '{activity_to_remove}' nie została znaleziona.")

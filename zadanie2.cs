@@ -124,6 +124,7 @@ namespace Planer
                 }
 
                 trip.AddDestination(destination);
+                trip.ShowItinerary();
 
                 while (true)
                 {
@@ -138,6 +139,7 @@ namespace Planer
                         {
                             destination.RemoveActivity(toRemove);
                             Console.WriteLine($"  Atrakcja '{removeActName}' została usunięta.");
+                            trip.ShowItinerary();
                         }
                         else
                         {
